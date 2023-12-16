@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Jolly Phonics</h1>
+    <p class="lead">Unlock Your Potential with Our Comprehensive Classes</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Explore Courses</a>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>About Us</h2>
+      <p>Describe your classes and what makes them unique. Highlight your mission and values.</p>
+      <a class="btn btn-secondary" href="#">Learn More</a>
+    </div>
+
+    <div class="col-md-6">
+      <h2>Our Courses</h2>
+      <div *ngFor="let course of courses" class="card">
+        <img [src]="course.imageUrl" class="card-img-top" [alt]="course.name + ' Image'">
+        <div class="card-body">
+          <h5 class="card-title">{{ course.name }}</h5>
+          <p class="card-text">{{ course.description }}</p>
+          <a href="#" class="btn btn-primary">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="mt-5 text-center">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for any inquiries or assistance.</p>
+    <a class="btn btn-secondary" href="#">Contact Now</a>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+  .bootstrap-wrapper {
+    background-color: #fff; /* Set your desired background color */
+  }
+  
+  .login-page-wrapper {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* .login-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  } */
+  .login-box {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Set your desired width */
+    max-width: 100%; /* Ensures the box doesn't exceed the specified width */
+    margin: 0 auto; /* Center the box horizontally */
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+
+  .custom-input {
+    border: none; /* Remove all borders */
+    border-bottom: 2px solid #3498db; /* Only bottom border */
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    outline: none; /* Remove the default focus outline */
+  }
+  
+  .custom-input:focus {
+    border-bottom-color: #007bff; /* Bottom border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Box shadow on focus */
+  }
+  .logo{
+    border-radius: 80%;
+    width: 150px;
+  }
