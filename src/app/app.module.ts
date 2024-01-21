@@ -14,6 +14,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { HeaderComponent } from './header/header.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { HttpClientModule } from "@angular/common/http";
     HomeComponent,
     LoginComponent,
     DashboardComponent,
+    HeaderComponent,
+    AboutUsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

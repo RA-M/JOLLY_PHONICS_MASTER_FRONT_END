@@ -1,0 +1,12 @@
+.custom-carousel {
+    height: 500px !important; /* Adjust this value as needed */
+  }
+  
+  /* If you need to remove the space below the carousel items */
+  .custom-carousel .carousel-inner {
+    overflow: hidden;
+  }
+
+  .custom-carousel-img {
+    height: 500px; /* Adjust this value as needed */
+  }

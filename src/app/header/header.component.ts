@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class NavBarComponent {
-
-
-  imageUrl = 'https://www.jollylearning.co.uk/wp-content/themes/dazzling-child/assets/header-bottom.svg';
+export class HeaderComponent {
 
   isSubmenuVisible: boolean = false;
 
@@ -45,4 +42,11 @@ export class NavBarComponent {
     console.log('Register button clicked');
     // Add your register logic here
   }
+
+  openSearch(): void {
+    // Handle the click event here, e.g., open a search modal or trigger a search function
+    const inputValue = (document.getElementById('searchInput') as HTMLInputElement).value;
+    alert('Searching for: ' + inputValue);
+  }
+  
 }

@@ -1,34 +1,225 @@
-<div class="container mt-5">
-  <div class="jumbotron text-center">
-    <h1 class="display-4">Welcome to Jolly Phonics</h1>
-    <p class="lead">Unlock Your Potential with Our Comprehensive Classes</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Explore Courses</a>
-  </div>
+<!-- home.component.html -->
+<!-- Carousel Section -->
 
-  <div class="row">
-    <div class="col-md-6">
-      <h2>About Us</h2>
-      <p>Describe your classes and what makes them unique. Highlight your mission and values.</p>
-      <a class="btn btn-secondary" href="#">Learn More</a>
+<div class="row custom-carousel">
+  <div class="col-md-12">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <!-- Carousel Inner Content -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipO__oB6dTZy1rQ9jT_Axs7F9RPS0P32KN2-5Wwc=s1360-w1360-h1020" class="d-block w-100 custom-carousel-img" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://thumbs.dreamstime.com/z/group-students-talking-writing-school-education-elementary-learning-people-concept-kids-pens-papers-classroom-50427947.jpg?ct=jpeg" class="d-block w-100 custom-carousel-img" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://media.istockphoto.com/id/691832930/photo/pupils-and-teacher-in-science-lesson-studying-robotics.jpg?s=1024x1024&w=is&k=20&c=4sgkZCmdwlmz_-HzbzoIHF_EeBeDAPgag9wnB5UqWT8=" class="d-block w-100 custom-carousel-img" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+  </div>
+</div> 
 
-    <div class="col-md-6">
-      <h2>Our Courses</h2>
-      <div *ngFor="let course of courses" class="card">
-        <img [src]="course.imageUrl" class="card-img-top" [alt]="course.name + ' Image'">
-        <div class="card-body">
-          <h5 class="card-title">{{ course.name }}</h5>
-          <p class="card-text">{{ course.description }}</p>
-          <a href="#" class="btn btn-primary">Enroll Now</a>
+  <!-- Cards Section -->
+<div class="container mt-5">
+  <div class="update__wrapper">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card update__box">
+          <img src="https://www.jollylearning.co.uk/wp-content/uploads/2023/04/classroom.jpeg" alt="Say hello to Jolly Classroom!" class="card-img-top update__box-img">
+          <div class="card-body">
+            <h4 class="card-title update__box-title">Say hello to Jolly Classroom!</h4>
+            <p class="card-text update__box-paragraph">Our digital platform for teaching Jolly Phonics contains over 150 fully structured lessons with multisensory games and activities.</p>
+            <a href="https://www.jollylearning.co.uk/introducing-jolly-classroom/" class="btn btn-primary update__box-link">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card update__box">
+          <img src="https://www.jollylearning.co.uk/wp-content/uploads/2023/04/Department-for-Education-validation.png" alt="High-quality SSP programme" class="card-img-top update__box-img">
+          <div class="card-body">
+            <h4 class="card-title update__box-title">High-quality SSP programme</h4>
+            <p class="card-text update__box-paragraph">Trusted by teachers and loved by children, Jolly Phonics is an effective SSP program validated by the Department for Education.</p>
+            <a href="https://www.jollylearning.co.uk/high-quality-ssp-programme-validated-by-the-dfe/" class="btn btn-primary update__box-link">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card update__box">
+          <img src="https://www.jollylearning.co.uk/wp-content/uploads/2023/11/Sue-webinar.png" alt="Helping Struggling Children" class="card-img-top update__box-img">
+          <div class="card-body">
+            <h4 class="card-title update__box-title">Helping Struggling Children</h4>
+            <p class="card-text update__box-paragraph">Don't miss your chance to register for a free webinar with Sue Lloyd, co-author of the Jolly Phonics program! Spaces are limited.</p>
+            <a href="https://my.demio.com/ref/SZsii8WYQP7MGWqF?utm_source=jolly&amp;utm_medium=website&amp;utm_campaign=home" class="btn btn-primary update__box-link">Learn more</a>
+          </div>
         </div>
       </div>
     </div>
-    
-  </div>
-
-  <div class="mt-5 text-center">
-    <h2>Contact Us</h2>
-    <p>Get in touch with us for any inquiries or assistance.</p>
-    <a class="btn btn-secondary" href="#">Contact Now</a>
   </div>
 </div>
+  
+<div class="card text-center mt-5">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-body-secondary">
+    2 days ago
+  </div>
+</div>
+  
+<div class="card text-center mt-5">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="true" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card text-bg-dark mt-5">
+  <img src="https://c8.alamy.com/comp/ATNW7X/children-standing-in-front-of-the-whiteboard-in-a-classroom-ATNW7X.jpg" class="card-img custom-carousel-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+  </div>
+</div>
+  
+
+<!-- Login Modal -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="formData.email">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="formData.password">
+          <label for="floatingPassword">Password</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Registration Modal -->
+
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerMModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="max-width: 600px; width: 100%;"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="registerMModalLabel">Sign Up</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+              <form class="mx-1 mx-md-4">
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInputName" placeholder="Name" [(ngModel)]="formData.name">
+                  <label for="floatingInputName">Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" [(ngModel)]="formData.email">
+                  <label for="floatingInputEmail">Email address</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="formData.password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="floatingRepeatePassword" placeholder="Password" [(ngModel)]="formData.repeatPassword">
+                  <label for="floatingRepeatePassword">Repeat your password</label>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                  <label class="form-check-label" for="form2Example3">
+                    I agree to all statements in <a href="#!">Terms of service</a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                  <button type="button" class="btn btn-primary btn-lg" (click)="registerUser()">Register</button>
+                </div>
+
+              </form>
+            </div>
+            <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                class="img-fluid" alt="Sample image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

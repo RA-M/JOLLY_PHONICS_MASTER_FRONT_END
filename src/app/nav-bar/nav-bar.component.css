@@ -1,100 +1,120 @@
- header {
-    background-color: #333;
-    padding: 1px;
-    color: white;
-  }
-
-  /* nav {
-    margin : 50px auto;
-    width  : 300px;
-  } */
-
-  li {
-    list-style-type : none;
-    background      : linear-gradient(rgba(220,220,255,0.4) 85%, rgba(255,255,255,0.5) 100%);
-  
-    float   : left;
-    cursor  : pointer;
-    padding : 3px 10px;
-    border-top    : 2px solid rgba(200,200,255,0.5);
-    border-bottom : 2px solid rgba(50,50,50,0.4);
-  }
-  
-  li:first-child {
-    border-radius : 5px 0 0 5px;
-  }
-  
-  li:last-child {
-    border-radius : 0 5px 5px 0;
-  }
-  
-  a {
-    display : block;
-    padding : 10px 13px;
-    font-size : 26px;
-    text-decoration : none;
-    border-radius   : 5px;
-    position        : relative;
-    top   : 0;
-    color : #FFF;     
-    transition : all .4s;
-  }
-  
-  li:hover a {
-    top   : -20px;
-    color : #4eacff;
-    background-color: #fff;
-    box-shadow : 0 0 5px 0 rgba(255, 255, 255, 0.7);
-    transition : all .4s;
-  }
-  
-  li a:after {
-    display  : block;
-    content  : '';
-    position : absolute;
-    top  : 100%;
-    left : 42%;
-    border-style : solid;
-    border-color : transparent;
-    border-width : 5px 5px 0 5px;
-    transition   : all .4s;
-  }
-  
-  li:hover a:after {
-    border-color : white transparent transparent transparent;
-    transition   : all .4s;
-  }
-
-  .menu2 {
-  width : 400px;
+body, h1, h2, h3, p, img, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.menu2 a {
-  font-family : georgia;
-  font-size   : 14px;
-  font-style  : italic;
-  text-transform : capitalize;
+/* .header_curvature {
+  width: 100%;
+  height: 100%;
+} */
+
+.left-background {
+  background-color: rgb(99, 99, 238);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+  justify-content: flex-end; /* Align items to the end (right) */
+  height: 100%;
+  width: 80%;
+  box-sizing: border-box;
 }
 
-.menu2 li {
-  border-right  : 1px solid rgba(200,200,255,0.5);
-  border-left   : 1px solid rgba(40,40,40,0.2); 
+.right-background {
+  background-color: rgb(223, 125, 141);
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  box-sizing: border-box;
 }
 
-.selected {
-  top   : -20px;
-  color : #4eacff;
-  background-color: #fff;
-  box-shadow : 0 0 5px 0 rgba(255, 255, 255, 0.7);
-  transition : all .4s;
+.header_socials {
+  display: flex;
+  gap: 20px; /* Adjust the gap as needed */
+  align-items: flex-start; /* Align items to the start (left) */
+}
+.align-self-end {
+  margin-left: auto;
 }
 
-.selected:after {
-  border-color : white transparent transparent transparent;
-  transition   : all .4s;
+/* =================================================================== */
+
+.header {
+  position: relative;
+  overflow: hidden;
 }
 
-a.fun {
-  display : none;
+
+
+/* =================================================================== */
+/* navbar */
+/* =================================================================== */
+
+
+/* app.component.css */
+.custom-navbar {
+  height: 98px;
+  background-size: cover;
+  background-position: center;
 }
-  
+
+.navbar-nav {
+  margin-bottom: 45px !important;
+  margin-right: 60px !important;
+}
+
+.logo {
+  position: absolute;
+  top: 0px; /* Adjust the top position as needed */
+  left: 50px; /* Adjust the left position as needed */
+  height: 100px; /* Set the height as needed */
+  width: 190px; /* Set the width as needed */
+}
+
+.navbar-brand img {
+  max-height: 100px; /* Adjust the max height of the logo */
+}
+
+.navbar-nav .nav-link {
+  color: #331a8d; /* Text color */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2f9744; /* Change color on hover */
+}
+
+.navbar-toggler {
+  border-color: #fff; /* Border color of the toggler button */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Color of the toggler icon */
+}
+
+/* Styles for the dropdown */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  border: none;
+  background-color: #fff; /* Background color of the dropdown */
+}
+
+.dropdown-item {
+  color: #333; /* Text color of dropdown items */
+}
+
+.dropdown-item:hover {
+  background-color: #ffcc00; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+/* =================================================================== */
+/* navbar end*/
+/* =================================================================== */

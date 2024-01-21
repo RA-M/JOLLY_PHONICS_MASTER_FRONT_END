@@ -11,6 +11,7 @@ import { RegisterRequest } from '../core/models/login/register.request';
 })
 export class LoginComponent implements OnInit{
 
+  formData: any = {};
   form: any={
     username:null,
     password:null
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit{
 
  }
 
-  ngOnInit(): void {
+ ngOnInit() {
     
   }
   onSubmit()

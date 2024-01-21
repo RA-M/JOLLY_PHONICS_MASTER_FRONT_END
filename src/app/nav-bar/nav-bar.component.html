@@ -1,26 +1,37 @@
-<header class="menu2">
-    <!-- <!-- <nav>
-      <ul>
-        <li><a href="#" routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li> -->
-        <!-- Add more navigation links as needed --> 
-      <!-- </ul>
-    </nav> -->
-  
+<!-- <img class="header_curvature" src="https://www.jollylearning.co.uk/wp-content/themes/dazzling-child/assets/header-bottom.svg">  -->
+  <!-- <img class="logo" src="https://www.jollylearning.co.uk/wp-content/themes/dazzling-child/assets/logo.png" alt="Logo"> -->
+  <!-- app.component.html -->
+<nav [style.background-image]="'url(' + imageUrl + ')'" class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" ><img class="logo" src="https://www.jollylearning.co.uk/wp-content/themes/dazzling-child/assets/logo.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/about-us" routerLinkActive="active">ABOUT US</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            COURSES
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Maths</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Abacus</a></li>
+          </ul>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/about-us" routerLinkActive="active">TESTIMONIALS</a>
+        </li>        
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
 
-  
-  <nav >
-    <menu>
-      <li><a href="#">home</a></li>
-      <li><a href="#">about</a></li>
-      <li><a href="#" class="selected">contact</a></li>
-      <li><a href="#">blog</a></li>
-    </menu>
-  </nav>
-  
-  
-  
-  
-  <a class="fun" href="http://info.flagcounter.com/YXv0"><img src="http://s03.flagcounter.com/count/YXv0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0"></a>
-  
-</header>
