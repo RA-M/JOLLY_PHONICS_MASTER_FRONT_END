@@ -10,3 +10,105 @@
   .custom-carousel-img {
     height: 500px; /* Adjust this value as needed */
   }
+
+
+  /* =========================================================== */
+
+  .nav-tabs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-tabs {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nav-tabs .nav-item {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-tabs .nav-link {
+    width: 100%;
+    color: black; /* Default text color */
+  }
+  .nav-tabs .nav-item.active-tab .nav-link {
+    font-weight: bold; /* Bold font for active tab */
+    border-bottom: 2px solid blue; /* Blue underline for active tab */
+  }
+  .tab-content-box {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .tab-content-box h3 {
+    margin-top: 0;
+  }
+  
+  .buttons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .active-card {
+    width: 400px;
+    height: 100px;
+  }
+  
+  .active-card .card-body {
+    text-align: left;
+  }
+
+  .dropdown {
+    align-self: flex-start;
+    position: relative; /* Ensure the dropdown items are positioned relative to the dropdown */
+  }
+  
+  .custom-dropdown-button {
+    background-color: white;
+    color: black;
+    border: 1px solid blue;
+    width: 100%; /* Ensure the dropdown button takes full width */
+    white-space: nowrap; /* Prevent text wrapping in the button */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+  }
+  
+  .custom-dropdown-menu {
+    background-color: white;
+    border: 1px solid blue;
+    width: 100%; /* Ensure the dropdown menu matches the width of the button */
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  
+  .custom-dropdown-menu .dropdown-item {
+    color: black;
+    width: 100%; /* Ensure each dropdown item matches the width of the menu */
+    box-sizing: border-box;
+    white-space: nowrap; /* Prevent text wrapping in dropdown items */
+  }
+  
+  .custom-dropdown-menu .dropdown-item:hover {
+    background-color: lightblue;
+  }
+  
+  .dropdown.show .custom-dropdown-menu {
+    display: block;
+  }

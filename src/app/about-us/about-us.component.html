@@ -1,4 +1,6 @@
-<div class="container">
+<!-- app.component.html -->
+<div class="clearfix">
+  <div class="container">
     <h2>About Us</h2>
     <p>
       Welcome to our company's about us page. Lorem ipsum dolor sit amet,
@@ -11,3 +13,25 @@
       Nullam in magna vel odio feugiat congue.
     </p>
   </div>
+
+  <div class="carousel-container">
+    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- <div class="carousel-item active">
+          <img src="assets/childimage.jpg" alt="Description of the image" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/childimage2.jpg" alt="Description of the image" class="d-block w-100">
+        </div> -->
+        <!-- <div class="carousel-item">
+          <img src="assets/childimage3.jpg" alt="Description of the image" class="d-block w-100">
+        </div> -->
+
+        <div *ngFor="let imagePath of images; let i = index" class="carousel-item" [ngClass]="{'active': i === currentImageIndex}">
+          <img [src]="imagePath" alt="Description of the image" class="d-block w-100">
+
+        <!-- Add more carousel items as needed -->
+      </div>
+    </div>
+  </div>
+</div>

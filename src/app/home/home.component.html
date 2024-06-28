@@ -222,4 +222,81 @@
   </div>
 </div>
 
+<!-- ============================================================================ -->
+<div class="container text-center mt-5">
+  <div class="nav-tabs-container">
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item" (click)="setActiveTab('active')" [class.active-tab]="activeTab === 'active'">
+        <a class="nav-link" [class.active]="activeTab === 'active'">Active</a>
+      </li>
+      <li class="nav-item" (click)="setActiveTab('test')" [class.active-tab]="activeTab === 'test'">
+        <a class="nav-link" [class.active]="activeTab === 'test'">Test</a>
+      </li>      
+      <li class="nav-item" (click)="setActiveTab('link')" [class.active-tab]="activeTab === 'link'">
+        <a class="nav-link" [class.active]="activeTab === 'link'">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <div class="tab-content-box">
+      <div *ngIf="activeTab === 'active'">
+        <div class="d-flex justify-content-start align-items-center mb-3 dropdown-container">
+          <div class="dropdown" dropdown>
+            <button id="dropdownMenuButton" dropdownToggle type="button" class="btn btn-secondary dropdown-toggle">
+              Dropdown button
+            </button>
+            <ul *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuButton">
+              <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
 
+          <div class="dropdown" dropdown>
+            <button id="dropdownMenuButton1" dropdownToggle type="button" class="btn btn-secondary dropdown-toggle custom-dropdown-button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ selectedValue || 'Select an option' }}
+            </button>
+            <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li *ngFor="let option of dropdownOptions">
+                <a class="dropdown-item" href="#" (click)="selectOption(option)">{{ option }}</a>
+              </li>
+            </ul>
+          </div>
+    
+        </div>
+        <div class="card active-card">
+          <div class="card-body">
+            <p><strong>Choose Country</strong></p>
+            <p>This is the process to choose country.</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="activeTab === 'test'">
+        <div class="d-flex justify-content-start align-items-center mb-3">
+          <button class="btn btn-secondary me-2">Secondary</button>
+          <button class="btn btn-primary">Primary</button>
+        </div>
+        <div class="card active-card">
+          <div class="card-body">
+            <p><strong>Choose Country</strong></p>
+            <p>This is the process to choose country.</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="activeTab === 'link'">
+        <h3>Link Content</h3>
+        <p>This is the content for Link tab.</p>
+      </div>
+      <div class="buttons">
+        <button *ngIf="activeTab !== 'active'" class="btn btn-primary" (click)="previousTab()">Previous</button>
+        <button *ngIf="activeTab !== 'link'" class="btn btn-primary" (click)="nextTab()">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<button class="btn btn-primary" (click)="download()">Download</button>
+
+<!-- PDF Viewer ======================================================================================= -->

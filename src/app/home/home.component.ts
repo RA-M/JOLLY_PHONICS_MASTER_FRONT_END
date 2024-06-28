@@ -27,7 +27,7 @@ export class HomeComponent {
     (error: any) => {
       // Handle errors here
       console.error('Error:', error);
-      alert('Error occurred');
+      //alert('Error occurred');
     });
   }
 
@@ -87,5 +87,58 @@ export class HomeComponent {
     { image: 'url-to-image-4.jpg', content: 'Content for Update Box 2' },
     { image: 'url-to-image-5.jpg', content: 'Content for Update Box 3' },
   ];
+
+
+
+//==========================================================================
+
+
+activeTab: string = 'active';
+
+  setActiveTab(tab: string) {
+    this.activeTab = tab;
+  }
+
+
+  tabs: string[] = ['active', 'test', 'link'];
+
+  nextTab() {
+    const currentIndex = this.tabs.indexOf(this.activeTab);
+    if (currentIndex < this.tabs.length - 1) {
+      this.activeTab = this.tabs[currentIndex + 1];
+    }
+  }
+
+  previousTab() {
+    const currentIndex = this.tabs.indexOf(this.activeTab);
+    if (currentIndex > 0) {
+      this.activeTab = this.tabs[currentIndex - 1];
+    }
+  }
+
+
+
+  selectedValue: string = ""; // Property to hold the selected value
+  dropdownOptions: string[] = ['Option 12', 'Option 2', 'Option 3']; // Example options
+
+  // Method to handle selection of an option
+  selectOption(option: string): void {
+    debugger;
+    this.selectedValue = option;
+    console.log('Selected value:', this.selectedValue);
+    // Additional logic based on the selected value can be added here
+  }
+
+
+//=======================================================================================
+
+  download(){
+
+  }
+
+
+  //PDF Viewer=======================================================================================
+
+  
 
 }
