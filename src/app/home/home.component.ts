@@ -4,6 +4,7 @@ import { CourseService } from './services/course.service';
 import { LoginService } from '../services/login.service';
 import { LoginRequest } from '../core/models/login/login.request';
 import { RegisterRequest } from '../core/models/login/register.request';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -137,8 +138,61 @@ activeTab: string = 'active';
   }
 
 
-  //PDF Viewer=======================================================================================
+  //Progress Bar=======================================================================================
 
+  showProgress: boolean = false;
+  progress: number = 0;
+  progressInterval: any;
+  timeoutInterval: any;
+  apiSubscription: Subscription | null = null;
   
+  startProgress() {
+    this.showProgress = true;
+    this.progress = 0;
+
+    this.progressInterval = setInterval(() => {
+      this.progress += 10;
+      if (this.progress >= 100) {
+        this.progress = 0; // Reset progress to 0 if it reaches 100%
+      }
+    }, 500);
+
+    if (!this.apiSubscription) {
+      let loginRequest: LoginRequest = {
+        username:this.formData.email,
+        password:this.formData.password
+      }
+  
+      this.loginService.login(loginRequest).subscribe(
+        (response: any) => {
+          console.log('Backend response received:', response);
+          this.clearProgress();
+        },
+        (error: any) => {
+          console.error('Error fetching data from backend:', error);
+          this.clearProgress();
+        }
+      );
+    }
+    this.setRetryTimeout();
+    
+  }
+
+  setRetryTimeout() {
+    this.timeoutInterval = setTimeout(() => {
+      // Reset progress to 0 and continue waiting for the response
+      this.progress = 0;
+      this.setRetryTimeout(); // Set another timeout to check again
+    }, 5000); // 5 seconds timeout to reset progress
+  }
+
+  clearProgress() {
+    clearInterval(this.progressInterval);
+    clearTimeout(this.timeoutInterval);
+    this.showProgress = false;
+    this.progress = 0;
+    this.apiSubscription?.unsubscribe();
+    this.apiSubscription = null;
+  }
 
 }
